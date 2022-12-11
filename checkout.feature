@@ -10,25 +10,23 @@ Critérios de Aceitação:
 3 – Ao tentar cadastrar com campos vazios, deve exibir mensagem de alerta.
 
 Contexto: 
-
-
-Esquema do Cenário: Cadastro válido
 Dado que estou na tela de checkout
-E digito <nome>
-E digito <sobrenome>
-E digito <nome da empresa>
-E seleciono o <pais>
-E digito o <endereco>
-E digito a <cidade>
-E digito o <pais>
-E digito o <cep>
-E digito o <telefone>
-E digito o <e-mail>
-Quando clicar em "Finalizar compra"
-Então finaliza a compra
+
+Cenário: Cadastro com e-mail inválido
+Quando inserir o email inválido "xyw@.com"
+Então deve mostrar uma mensagem de alerta "E-mail inválido"
+
+Cenário: Tentativa de cadastro com campos vazios
+Quando eu deixar de preencher algum campo
+Então deve mostrar uma mensagem de alerta "Campos vazios"
+
+Esquema do Cenário: Todos os campos obrigatórios
+Quando preencher todos os campos com dados válidos
+E clico em "Finalizar compra"
+Então deve finalizar a compra
 
 Exemplos: 
 
 |nome|sobrenome|nomedaempresa|pais|endereco|cidade|pais|cep|telefone|e-mail|
-|Jady|Martins|Ebac|Brasil|Alameda Yaya|Guarulhos|Brasil|07060000|9999999|jady@gmail.com|
-|Walacy|Campos|Ebac|Brasil|Manoel dos Anjos| Londrina | Brasil | 86070000| 9999999| walacy@gmail.com|
+|Jady|Martins|Empresa X|Brasil|Alameda Yaya|Guarulhos|Brasil|07060000|9999999|jady@gmail.com|
+|Walacy|Campos|Empresa X|Brasil|Manoel dos Anjos| Londrina | Brasil | 86070000| 9999999| walacy@gmail.com|

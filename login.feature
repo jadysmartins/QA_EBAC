@@ -14,11 +14,14 @@ Dado que estou na página de login da EBAC-SHOP
 Cenário: Autenticação válida
 Quando eu digitar o usuário "joao@gmail.com"
 E a senha "senha@123"
-Então deve axibir a tela de checkout
+Então deve direcionar para a tela de checkout
+---------------------------------------------
+Quando eu inserir e-mail e senha válidos
+Então deve direcionar para a tela de checkout
 
 Cenário: Autenticação inválida
-Quando eu digitar o usuário "xxx@yahoo.com"
-E senha "123Abc"
-Então deve axibir uma mensagem de alerta: "Usuário ou senha inválidos"
-
-
+Quando eu digitar o usuário ou senha inválidos
+Então deve exibir uma mensagem de alerta: "Usuário ou senha inválidos"
+---------------------------------------------
+Quando eu digitar e-mail ou senha inválidos
+Então deve exibir mensagem de alerta: "Usuário ou senha inválidos"
