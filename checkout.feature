@@ -21,12 +21,12 @@ Quando eu deixar de preencher algum campo
 Então deve mostrar uma mensagem de alerta "Campos vazios"
 
 Esquema do Cenário: Todos os campos obrigatórios
-Quando preencher todos os campos com dados válidos
+Quando preencher <nome>, <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone> e <e-mail>
 E clico em "Finalizar compra"
 Então deve finalizar a compra
 
 Exemplos: 
 
-|nome|sobrenome|nomedaempresa|pais|endereco|cidade|pais|cep|telefone|e-mail|
+|nome|sobrenome|pais|endereco|cidade|cep|telefone|e-mail|
 |Jady|Martins|Empresa X|Brasil|Alameda Yaya|Guarulhos|Brasil|07060000|9999999|jady@gmail.com|
 |Walacy|Campos|Empresa X|Brasil|Manoel dos Anjos| Londrina | Brasil | 86070000| 9999999| walacy@gmail.com|
